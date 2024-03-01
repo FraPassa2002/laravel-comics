@@ -1,0 +1,29 @@
+main {
+    .bg-welcome {
+        background-color: rgb(26, 24, 24);
+    }
+    .jumbotron-container {
+        background-image: url('../img/jumbotron.jpg');
+        height: 200px;
+    
+    
+        .container {
+            height: 100%;
+            position: relative;
+    
+            .title-container {
+                height: 60px;
+                width: 200x;
+                background-color: royalblue;
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                h1 {
+                    color: white; 
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

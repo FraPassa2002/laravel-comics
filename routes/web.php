@@ -14,40 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $firstName = 'Gino';
-    $lastName = 'Paoli';
 
-    /*
-        compact: crea un array associativo le cui chiavi sono le stringhe
-                 che mettiamo tra le parentesi, mentre i valori di tali
-                 chiavi sono i valori delle variabili con i nomi corrispondenti
-                 alle stringhe inserite
+    $comics = config('comics');
 
-        compact('firstName', 'lastName')
-         |                                     |
-         V                                     V
+    // dd($comics);
+    
+    return view('welcome', compact('comics'));
+})->name('home');
 
-         [
-            'firstName' => $firstName,
-            'lastName' => $lastName,
-         ]
-    */
+Route::get('/comics', function () {
 
-    /*
-        dd: vuol dire dump and die, cioè fai il var_dump (più carino però)
-            e poi stoppa l'esecuzione
-    */
-    // dd(compact('firstName', 'lastName'));
+    $comics = config('comics');
 
-    return view('welcome', [
-        'firstName' => $firstName,
-        'lastName' => $lastName,
-    ]);
-    // return view('welcome', compact('firstName', 'lastName'));
-});
+    $comic = $comics[$_GET['id']];
+    
+    return view('subpages.comics.show', compact('comic'));
+})->name('comics.show');
 
-Route::get('/chi-siamo', function () {
-    return view('subpages.about');
-});
-
+// classe::metodo http che vogliamo usare. quando accediamo ad un link farà una chiamata di tipo get . post si usa tramite form
+//  ↓      ↓
 // Route::get(PERCORSO CON CUI ARRIVARE ALLA PAGINA, FUNZIONE DI CALLBACK CHE MI CREA LA RISPOSTA DA DARE ALL UTENTE)

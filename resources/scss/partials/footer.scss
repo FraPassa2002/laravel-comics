@@ -1,0 +1,48 @@
+footer {
+    min-height: 400px;
+
+    .footer-top {
+        height: 300px;
+        background-color: black;
+        
+        .container {
+            height: 100%;
+            background-image: url('../img/dc-logo-bg.png');
+            background-size:400px;
+            background-repeat: no-repeat;
+            background-position: right;
+
+            h5 {
+                color: white;
+            }
+
+            ul {
+
+                li {
+                   
+                    a {
+                        color: lightgray;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: gray;
+        padding: 35px 0;
+        .col {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+
+            h5 {
+                font-weight: bold;
+                color: royalblue;
+            }
+        }
+
+        
+
+    }
+}

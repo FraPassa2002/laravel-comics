@@ -1,15 +1,26 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./partials/header.scss";
+@import "./partials/footer.scss";
+@import "./partials/mixins.scss";
+@import "./partials/welcome.scss";
+@import "./partials/show.scss";
 
 main {
-    background-color: lightcoral;
+    min-height: calc(100vh - 520px);
 }
 
-.gatto-img {
-    height: 200px;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.gatto-bg {
-    height: 200px;
-    background-image: url('../img/gatto.webp');
-    background-size: contain;
+img {
+    height: 100%;  
 }
+
+a {
+    text-decoration: none;
+}
+
+
